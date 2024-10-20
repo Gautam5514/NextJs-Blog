@@ -41,3 +41,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ![Home Section](<Screenshot 2024-10-20 022549.png>)
 this is the second image
 ![Blog Section](<Screenshot 2024-10-20 022617.png>)
+
+About page
+![alt text](image.png)
