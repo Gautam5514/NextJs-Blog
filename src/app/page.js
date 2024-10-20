@@ -1,10 +1,9 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import Typed from 'typed.js';
 import React, { useRef, useEffect } from 'react';
 
 export default function Home() {
-  // Create reference to store the DOM element containing the animation
   const el = useRef(null);
 
   useEffect(() => {
@@ -14,7 +13,6 @@ export default function Home() {
     });
 
     return () => {
-      // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
   }, []);
@@ -31,7 +29,9 @@ export default function Home() {
           </p>
           <div className="mt-6 bg-transparent border rounded-lg dark:border-gray-700 lg:w-2/3 focus-within:border-primary focus-within:ring focus-within:ring-primary dark:focus-within:border-primary focus-within:ring-opacity-20">
             <form action="https://www.creative-tim.com/twcomponents/search" className="flex flex-wrap justify-between md:flex-row">
-
+              {/* Optional Search Input */}
+              <input type="text" placeholder="Search components..." className="flex-1 p-2 border dark:border-gray-600 rounded-lg" />
+              <Button type="submit" className="mt-2 md:mt-0">Search</Button>
             </form>
           </div>
         </div>
@@ -97,8 +97,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
       <section className="py-12 bg-white dark:bg-gray-900">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-12">
@@ -118,67 +116,59 @@ export default function Home() {
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
               <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105 text-center">
                 <p className="text-gray-600 dark:text-gray-400">"Amazing experience! The team was professional and the results were outstanding."</p>
-                <h3 className="mt-4 text-xl font-semibold text-gray-800 dark:text-gray-200">Ravi Mandal</h3>
-                <p className="text-gray-500 dark:text-gray-300">Marketing Director, AuraMatch</p>
+                <h3 className="mt-4 text-xl font-semibold text-gray-800 dark:text-gray-200">Deepika Kumar</h3>
+                <p className="text-gray-500 dark:text-gray-300">CTO, TechSavvy</p>
               </div>
             </div>
             {/* Testimonial 3 */}
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
               <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105 text-center">
-                <p className="text-gray-600 dark:text-gray-400">"Exceptional service and support. We couldn't be happier with the results."</p>
-                <h3 className="mt-4 text-xl font-semibold text-gray-800 dark:text-gray-200">Sagar Pandit</h3>
-                <p className="text-gray-500 dark:text-gray-300">CTO, GP</p>
+                <p className="text-gray-600 dark:text-gray-400">"A top-notch product that exceeded my expectations. Will definitely use again!"</p>
+                <h3 className="mt-4 text-xl font-semibold text-gray-800 dark:text-gray-200">Mohan Das</h3>
+                <p className="text-gray-500 dark:text-gray-300">Founder, NextGen Solutions</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
 
       <section className="py-12 bg-gray-100 dark:bg-gray-900">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">Top Blogs</h2>
-            <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">Check out our most popular blog posts</p>
+            <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">Latest Blogs</h2>
+            <p className="mt-4 text-lg text-gray-500 dark:text-gray-300">Stay updated with our latest insights</p>
           </div>
           <div className="flex flex-wrap justify-center">
-            {/* Blog 1 */}
+            {/* Blog Post 1 */}
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105">
-                <img src="https://render.fineartamerica.com/images/rendered/search/canvas-print/10/6.5/mirror/break/images/artworkimages/medium/2/jean-michel-basquiat-token-raq-medi-canvas-print.jpg" className="w-full h-64 object-cover rounded-t-lg" />
-                <div className="mt-4">
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">About Token</h3>
-                  <p className="mt-2 text-gray-600 dark:text-gray-400">A token verifies identity and manages sessions in applications.</p>
-                  <Button className="m-2" variant="outline" href="/blog-post-1">Read More</Button>
-                </div>
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105 text-center">
+                <img src="https://source.unsplash.com/random/300x200/?coding" alt="Blog Post 1" className="mb-4 rounded" />
+                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">How to Learn Programming</h3>
+                <p className="mt-2 text-gray-500 dark:text-gray-300">A comprehensive guide on how to start your journey in programming.</p>
+                <Button className="mt-4">Read More</Button>
               </div>
             </div>
-            {/* Blog 2 */}
+            {/* Blog Post 2 */}
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105">
-                <img src="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Blog 2" className="w-full h-64 object-cover rounded-t-lg" />
-                <div className="mt-4">
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">About Firebase</h3>
-                  <p className="mt-2 text-gray-600 dark:text-gray-400">Firebase offers backend services like authentication, database, and hosting.</p>
-                  <Button className="m-2" variant="outline" href="/blog-post-2">Read More</Button>
-                </div>
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105 text-center">
+                <img src="https://source.unsplash.com/random/300x200/?web" alt="Blog Post 2" className="mb-4 rounded" />
+                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Understanding Web Development</h3>
+                <p className="mt-2 text-gray-500 dark:text-gray-300">An insight into the various technologies and tools used in web development.</p>
+                <Button className="mt-4">Read More</Button>
               </div>
             </div>
-            {/* Blog 3 */}
+            {/* Blog Post 3 */}
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
-              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105">
-                <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg" alt="Blog 3" className="w-full h-64 object-cover rounded-t-lg" />
-                <div className="mt-4">
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Aboout Google Cloud</h3>
-                  <p className="mt-2 text-gray-600 dark:text-gray-400">Google Cloud provides scalable computing, storage, and AI-driven services.</p>
-                  <Button className="m-2" variant="outline" href="/blog-post-3">Read More</Button>
-                </div>
+              <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105 text-center">
+                <img src="https://source.unsplash.com/random/300x200/?tech" alt="Blog Post 3" className="mb-4 rounded" />
+                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">Aboout Our Tech Journey</h3>
+                <p className="mt-2 text-gray-500 dark:text-gray-300">Sharing our experiences and lessons learned in the tech industry.</p>
+                <Button className="mt-4">Read More</Button>
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </main>
   );
-};
+}
