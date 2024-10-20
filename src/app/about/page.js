@@ -96,26 +96,6 @@ export default function About() {
                                 </p>
                             </div>
                         </div>
-
-                        {/* Uncomment this section if needed
-                        <div className="flex flex-col md:flex-row-reverse items-center">
-                            <div className="md:w-1/3">
-                                <Image
-                                    src="/images/devfest.jpg"
-                                    alt="Harry mentoring others"
-                                    layout="responsive"
-                                    width={500}
-                                    height={300}
-                                    className="w-full rounded-lg shadow-lg"
-                                />
-                            </div>
-                            <div className="md:w-2/3 md:pr-8 mt-8 md:mt-0">
-                                <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Giving Back</h3>
-                                <p className="mt-4 text-gray-600 dark:text-gray-50">
-                                    Today, Harry is not only a proficient coder but also a mentor to others. He regularly contributes to the programming community by writing tutorials, giving talks, and helping new coders find their footing in the world of software development. For Harry, coding is more than just a profession—it’s a lifelong journey of learning and sharing knowledge.
-                                </p>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </section>

@@ -145,7 +145,7 @@ export default function Home() {
             {/* Blog 1 */}
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
               <div className="p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 transform transition duration-500 hover:scale-105">
-                <img src="/images/blog2.jpg" className="w-full h-64 object-cover rounded-t-lg" />
+                <img src="https://render.fineartamerica.com/images/rendered/search/canvas-print/10/6.5/mirror/break/images/artworkimages/medium/2/jean-michel-basquiat-token-raq-medi-canvas-print.jpg" className="w-full h-64 object-cover rounded-t-lg" />
                 <div className="mt-4">
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">About Token</h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-400">A token verifies identity and manages sessions in applications.</p>

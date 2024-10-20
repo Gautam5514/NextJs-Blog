@@ -6,15 +6,22 @@ import path from "path";
 import matter from "gray-matter";
 
 // Get the absolute path to the content directory
-const contentDir = path.join(process.cwd(), "content");
+const contentDir = path.join(process.cwd(), "src", "content");
 
-const dirContent = fs.readdirSync(contentDir, "utf-8");
+// Check if the content directory exists and read the files
+let blogs = [];
+if (fs.existsSync(contentDir)) {
+    const dirContent = fs.readdirSync(contentDir, "utf-8");
 
-const blogs = dirContent.map(file => {
-    const fileContent = fs.readFileSync(path.join(contentDir, file), "utf-8");
-    const { data } = matter(fileContent);
-    return { ...data, slug: file.replace(/\.md$/, "") }; // Add slug to each blog post
-});
+    blogs = dirContent.map((file) => {
+        const filePath = path.join(contentDir, file); // Corrected file path
+        const fileContent = fs.readFileSync(filePath, "utf-8");
+        const { data } = matter(fileContent); // Extract front matter (data) from the markdown files
+        return data;
+    });
+} else {
+    console.error(`Content directory not found at: ${contentDir}`);
+}
 
 /**
  * Blog component that renders a list of blog posts.
@@ -36,9 +43,7 @@ const Blog = () => {
                             <div className="text-sm mb-4">
                                 <span>By {blog.author}</span> | <span>{new Date(blog.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' })}</span>
                             </div>
-                            <Link href={`/blogpost[slug]${blog.slug}`} className={buttonVariants({ variant: "outline" })}>
-                                Click here
-                            </Link>
+                            <Link href={`/blogpost/${blog.slug}`} className={buttonVariants({ variant: "outline" })}>Click here</Link>
                         </div>
                     </div>
                 ))}
